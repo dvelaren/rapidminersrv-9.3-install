@@ -10,7 +10,7 @@ This is a guide on how to install RapidMiner 9.3 Server on Ubuntu 18.04
 
 ## Installation
 
-## Java JRE 1.8
+### Java JRE 1.8
 
 Download Java Run-time Engine from [Java webpage](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
@@ -60,7 +60,7 @@ Check if java CLI works, the following command should output installed version
 java -version
 ```
 
-## Installing PostgreSQL
+### Installing PostgreSQL
 
 Install PostgreSQL using apt
 ```sh
@@ -90,7 +90,7 @@ CREATE USER rapidminer WITH ENCRYPTED PASSWORD 'rapidminer';
 GRANT ALL PRIVILEGES ON DATABASE rapidminer_server TO rapidminer;
 ```
 
-## Install RapidMiner Server
+### Install RapidMiner Server
 
 Create a user account in Ubuntu for rapidminer. Enter as password rapidminer, and as Full Name rapidminer. Leave the other fields empty
 ```sh
@@ -144,7 +144,7 @@ Click try connection to check that it's correctly working
 
 Then click next and follow until the end of the installation.
 
-## Executing RapidMiner Server
+### Executing RapidMiner Server
 
 Navigate to rapidminer install directory and run `standalone.sh` script
 
@@ -167,7 +167,7 @@ Add a new user through the left menu inside Administration/User Management
 
 Add rapidminer user to administrator group by clicking on the Display name
 
-## Creating a system service to automatically deploy rapidminer-server on system start
+### Creating a system service to automatically deploy rapidminer-server on system start
 
 Create a new service inside /etc/init.d/
 ```sh
