@@ -3,6 +3,7 @@
 This is a guide on how to install RapidMiner 9.3 Server on Ubuntu 18.04
 
 ## Requirements
+- OS: Ubuntu 18.04 LTS
 - CPU: Minimum 2 cores at 2.4 GHz
 - RAM: 6 GB
 - HDD: 10 GB
@@ -11,7 +12,7 @@ This is a guide on how to install RapidMiner 9.3 Server on Ubuntu 18.04
 
 ## Java JRE 1.8
 
-Download Java Run-time Engine from Java webpage: https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+Download Java Run-time Engine from [Java webpage](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 
 Change directory to `usr/lib/jvm`
 ```
@@ -196,7 +197,7 @@ case "$1" in
     ;;
     stop)
         echo "Stopping RapidMiner Server..."
-        start-stop-daemon --start --quiet --background --chuid ${RAPIDMINER-SERVER_USER} --exec ${RAPIDMINER-SERVER_HOME}/bin/jboss-cli.sh -- --connect --command=:shutdown
+        start-stop-daemon --start --quiet --background --chuid ${SERVER_USER} --exec ${SERVER_HOME}/bin/jboss-cli.sh -- --connect --command=:shutdown
     ;;
     *)
         echo "Usage: /etc/init.d/rapidminerserver {start|stop}"; exit 1;
